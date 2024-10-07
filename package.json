@@ -9,7 +9,11 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "storybook-generate": "sb-rn-get-stories"
+    "storybook": "EXPO_PUBLIC_STORYBOOK_ENABLED=true expo start",
+    "storybook-generate": "sb-rn-get-stories",
+    "storybook:ios": "npx uri-scheme open exp://127.0.0.1:8081/--/storybook --ios",
+    "storybook:android": "npx uri-scheme open exp://127.0.0.1:8081/--/storybook --android",
+    "storybook:all": "npx uri-scheme open exp://127.0.0.1:8081/--/storybook --ios --android"
   },
   "jest": {
     "preset": "jest-expo"

@@ -5,8 +5,8 @@ export default function RootLayout() {
   const router = useRouter();
 
   useEffect(() => {
-    if (process.env.NODE_ENV === "development") {
-      router.push("storybook");
+    if (process.env.EXPO_PUBLIC_STORYBOOK_ENABLED === "true") {
+      router.push("/storybook");
     }
   }, []);
 
